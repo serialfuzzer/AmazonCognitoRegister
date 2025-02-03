@@ -1,7 +1,7 @@
 const { CognitoIdentityProviderClient, SignUpCommand, ResendConfirmationCodeCommand, ConfirmSignUpCommand } = require("@aws-sdk/client-cognito-identity-provider");
 
 const email = "test@gmail.com";
-const password = "YourStrongPassword123!";
+const CLIENT_ID = 'YOUR_CLIENT_ID';
 
 async function confirmUser(username, confirmationCode) {
     const command = new ConfirmSignUpCommand({
@@ -19,7 +19,7 @@ async function confirmUser(username, confirmationCode) {
 }
 (async () => {
 
-    await confirmUser(email, "123456");
+    await confirmUser(email, "YOUR_OTP");
 
 })();
     // Step 3: Confirm User (Replace "123456" with actual code received)

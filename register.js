@@ -2,7 +2,7 @@ const { CognitoIdentityProviderClient, SignUpCommand, ResendConfirmationCodeComm
 
 const client = new CognitoIdentityProviderClient({ region: "eu-west-1" }); // Change to your AWS region
 
-const CLIENT_ID = "297v04m0sa9cma6c50uuo5lnvl"; // Replace with your Cognito App Client ID
+const CLIENT_ID = "XXXXX"; // Replace with your Cognito App Client ID
 
 // Function to sign up a new user
 async function signUpUser(username, password) {
@@ -53,7 +53,6 @@ async function resendConfirmationCode(username) {
 
     // Step 2: Resend Confirmation Code (if needed)
     await resendConfirmationCode(email);
-
 
 })();
 
